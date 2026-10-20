@@ -193,7 +193,9 @@ body {
   <div class="tab active" data-tab="overview" onclick="switchTab('overview')">🩺 病情概览</div>
   <div class="tab" data-tab="doctors" onclick="switchTab('doctors')">👨‍⚕️ 医生推荐</div>
   <div class="tab" data-tab="questions" onclick="switchTab('questions')">📋 面诊问题</div>
-  <div class="tab" data-tab="care" onclick="switchTab('care')">🛟 陪护与保险</div>
+  <div class="tab" data-tab="care" onclick="switchTab('care')">🛟 陪护护工</div>
+  <div class="tab" data-tab="reimburse" onclick="switchTab('reimburse')">🧾 报销指南</div>
+  <div class="tab" data-tab="knowledge" onclick="switchTab('knowledge')">📖 知识科普</div>
 </div>
 
 <!-- ═══════════ TAB 1: 病情概览 ═══════════ -->
@@ -533,9 +535,137 @@ body {
 
 </div>
 
+<!-- ═══════════ TAB 5: 报销指南 ═══════════ -->
+<div id="tab-reimburse" class="tab-content">
+
+  <div class="card">
+    <h3>🧾 保单信息（已核实）</h3>
+    <table class="info-table">
+      <tr><th>项目</th><th>内容</th></tr>
+      <tr><td>产品</td><td>众民保·中高端医疗险2026（年缴版B）</td></tr>
+      <tr><td>保单号</td><td>IH1100633710706538</td></tr>
+      <tr><td>保费</td><td>¥2,486 / 年</td></tr>
+      <tr><td>保险期间</td><td>2026-03-20 ~ 2027-03-19</td></tr>
+      <tr><td>核心保额</td><td>一般医疗 300万 ｜ 重大疾病医疗 300万 ｜ 特定药品 300万 ｜ 质子重离子 300万</td></tr>
+      <tr><td>特需医疗加油包</td><td>❌ 未购买</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🎯 重疾界定：Ⅰ期=轻症，Ⅱ期=重疾</h3>
+    <p>保单明确：<b>TNM Ⅰ期或更轻的甲状腺癌，不属于"恶性肿瘤——重度"</b>。妈妈是侧颈淋巴结转移 → Ⅱ期 → 算"恶性肿瘤——重度"（重大疾病），可触发重疾医疗 + 特需部扩展。</p>
+  </div>
+
+  <div class="card">
+    <h3>🏥 特需部报销规则</h3>
+    <ul class="checklist">
+      <li><span class="box"></span><b>挂号费（含特需挂号费）：不报</b>——保单费用清单里没有"挂号费"这项</li>
+      <li><span class="box"></span>一般医疗只报<b>普通部</b>；未买特需加油包，普通疾病去特需部不报</li>
+      <li><span class="box"></span><b>确诊重大疾病后</b>：特需部/国际部/VIP部 <b>0免赔、100%赔付</b>，特需部不支持社保结算仍 100%</li>
+      <li><span class="box"></span>床位费限 2,500元/天、陪床费限 1,000元/天</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>📅 住院前后 30 天门急诊（可报）</h3>
+    <p>确诊重疾 + 住院手术后，<b>住院前 30 天 ~ 出院后 30 天</b>内、与住院同因的门急诊费用（含特需门诊检查费/诊疗费）可走「重大疾病住院前后门急诊」报销。条件：①确诊重疾 ②因该病住院 ③住院前30天内 ④与住院同因。</p>
+  </div>
+
+  <div class="warn-box">
+    ⚠️ <b>关键前提（已确认无风险）：</b>保单"高危结节（4级及以上结节）"属特定既往症除外。妈妈最早的甲状腺记录是 2026-05-04（TI-RADS 4a），在投保日 2026-03-20 之后 → 属<b>投保后新发</b>，甲状腺癌可按"新发恶性肿瘤"正常赔付。
+  </div>
+
+  <div class="card">
+    <h3>❤️ 高血压/脑梗的连带风险</h3>
+    <p>妈妈高血压3级+脑梗属特定既往症（"高血压及全部并发症不在保障范围"）。甲状腺癌手术<b>本身能报</b>，但术中/术后若出现<b>高血压、脑梗相关并发症</b>（如脑血管意外），那部分费用可能被除外。术前务必控制好血压、评估脑血管风险。</p>
+  </div>
+
+</div>
+
+<!-- ═══════════ TAB 6: 知识科普 ═══════════ -->
+<div id="tab-knowledge" class="tab-content">
+
+  <div class="highlight-box">
+    <h3>🧠 总览：为什么叫"懒癌"</h3>
+    <p>甲状腺癌是预后最好的实体瘤之一，尤其乳头状癌 <b>10 年生存率 >95%</b>。但"懒"≠"不用管"：一旦有淋巴结转移，必须规范手术清干净。妈妈目前 III/IV 区可疑转移，正处在"必须认真处理"的关键节点——只要<b>首台手术做得规范彻底，预后依然非常好</b>。</p>
+  </div>
+
+  <div class="card">
+    <h3>🔬 病理分型</h3>
+    <table class="info-table">
+      <tr><th>类型</th><th>占比</th><th>特点</th></tr>
+      <tr><td><b>乳头状癌 PTC</b></td><td>85–90%</td><td>最常见、预后最好，妈妈大概率是这种</td></tr>
+      <tr><td>滤泡状癌 FTC</td><td>5–10%</td><td>走血行多</td></tr>
+      <tr><td>髓样癌 MTC</td><td>2–3%</td><td>有遗传（RET），测降钙素</td></tr>
+      <tr><td>未分化癌 ATC</td><td>&lt;1%</td><td>极凶险，妈妈情况不像</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>📋 两份病理报告的区别</h3>
+    <table class="info-table">
+      <tr><th></th><th>① 穿刺病理（术前）</th><th>② 手术病理（术后）</th></tr>
+      <tr><td>何时做</td><td>10-16 FNA 穿刺</td><td>手术切下甲状腺+淋巴结后</td></tr>
+      <tr><td>何时出</td><td>穿刺后 5–7 工作日（现在等的）</td><td>术后 5–10 工作日</td></tr>
+      <tr><td>是什么</td><td>细胞学 + 基因（Bethesda、BRAF、多基因、Tg洗脱液）</td><td>组织学（石蜡切片）</td></tr>
+      <tr><td>用途</td><td>术前判良恶性、定手术</td><td>金标准确诊 + 精确分期（淋巴结数目、TNM）</td></tr>
+    </table>
+    <p style="margin-top:8px">一句话：<b>① 决定怎么治，② 决定算不算重疾、报不报得满。</b></p>
+  </div>
+
+  <div class="card">
+    <h3>🧬 诊断路径：Bethesda + BRAF</h3>
+    <table class="info-table">
+      <tr><th>Bethesda 分级</th><th>含义</th><th>恶性风险</th></tr>
+      <tr><td>I</td><td>标本不满意（可能重穿）</td><td>—</td></tr>
+      <tr><td>II</td><td>良性</td><td>&lt;3%</td></tr>
+      <tr><td>III</td><td>意义不明确</td><td>5–15%</td></tr>
+      <tr><td>IV</td><td>滤泡性病变/肿瘤</td><td>15–30%</td></tr>
+      <tr><td>V</td><td>可疑恶性</td><td>60–75%</td></tr>
+      <tr><td>VI</td><td>恶性</td><td>97–99%</td></tr>
+    </table>
+    <p style="margin-top:8px"><b>BRAF V600E 阳性 ≈ 基本确诊乳头状癌</b>（特异性极高）。报告出来后重点看两行：<b>Bethesda 几级 + BRAF 阳不阳性</b>。</p>
+  </div>
+
+  <div class="card">
+    <h3>📐 TNM 分期（AJCC 第8版）</h3>
+    <p>妈妈 60 岁，用 55 岁以上分期：T2（3.4cm）+ N1b（侧颈转移）+ M0 → <b>Ⅱ期</b>。甲状腺癌里"有淋巴结转移"很常见，Ⅱ期依然是治愈率很高的分期，不是晚期没救。</p>
+  </div>
+
+  <div class="card">
+    <h3>🔪 手术方案</h3>
+    <ul class="checklist">
+      <li><span class="box"></span><b>全切</b>：有侧颈淋巴结转移 = 全切硬指征</li>
+      <li><span class="box"></span><b>中央区（VI区）清扫</b>：常规做（转移第一站）</li>
+      <li><span class="box"></span><b>侧颈清扫（II–V区）</b>：因 III/IV 区可疑转移，做治疗性清扫，重点是 III/IV 区</li>
+      <li><span class="box"></span>清得干净，复发率直线下降——所以排医生时把"侧颈清扫经验"放第一</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>💊 术后治疗</h3>
+    <ul class="checklist">
+      <li><span class="box"></span><b>优甲乐</b>：全切后终身替代 + TSH 抑制治疗，便宜、副作用小</li>
+      <li><span class="box"></span><b>放射性碘（碘131）</b>：中高危才做，是否做看术后风险分层</li>
+      <li><span class="box"></span>靶向药：仅晚期/难治，妈妈用不到</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>🚫 常见误区</h3>
+    <ul class="checklist">
+      <li><span class="box"></span>❌ "懒癌不用管" → 有转移必须规范治</li>
+      <li><span class="box"></span>❌ "淋巴结转移=晚期没救" → 很常见，Ⅱ期治愈率仍高</li>
+      <li><span class="box"></span>❌ "切了终身吃药可怕" → 优甲乐便宜安全，每天一片</li>
+      <li><span class="box"></span>✅ 关键在<b>找对医生做规范彻底的首台手术</b></li>
+    </ul>
+  </div>
+
+</div>
+
 <!-- FOOTER -->
 <div class="footer">
-  🩺 妈妈甲状腺就诊攻略 · 更新：2026-10-19 · 已脱敏，仅作家人内部参考<br>
+  🩺 妈妈甲状腺就诊攻略 · 更新：2026-10-20 · 已脱敏，仅作家人内部参考<br>
   出诊时间 / 陪护政策以医院官方实时信息为准，具体诊疗请遵医嘱
 </div>
 
@@ -551,9 +681,9 @@ function switchTab(name) {
 }
 window.addEventListener('hashchange', function(){
   var h = window.location.hash.replace('#','');
-  if (['overview','doctors','questions','care'].indexOf(h) !== -1) switchTab(h);
+  if (['overview','doctors','questions','care','reimburse','knowledge'].indexOf(h) !== -1) switchTab(h);
 });
-if (['overview','doctors','questions','care'].indexOf(window.location.hash.replace('#','')) !== -1) {
+if (['overview','doctors','questions','care','reimburse','knowledge'].indexOf(window.location.hash.replace('#','')) !== -1) {
   switchTab(window.location.hash.replace('#',''));
 }
 </script>
