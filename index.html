@@ -196,6 +196,7 @@ body {
   <div class="tab" data-tab="preop" onclick="switchTab('preop')">🏥 术前准备</div>
   <div class="tab" data-tab="care" onclick="switchTab('care')">🛟 陪护护工</div>
   <div class="tab" data-tab="reimburse" onclick="switchTab('reimburse')">🧾 报销指南</div>
+  <div class="tab" data-tab="materials" onclick="switchTab('materials')">📝 材料待办</div>
   <div class="tab" data-tab="knowledge" onclick="switchTab('knowledge')">📖 知识科普</div>
 </div>
 
@@ -668,6 +669,41 @@ body {
 
 </div>
 
+<!-- ═══════════ TAB: 材料待办 ═══════════ -->
+<div id="tab-materials" class="tab-content">
+
+  <div class="warn-box">📝 报销三件套 = <b>门诊病历 + 发票 + 检查报告</b>，每次就诊缺一不可。以下是核对后的缺失项，对照补齐。</div>
+
+  <div class="card">
+    <h3>🔴 待补（4 处）</h3>
+    <ul class="checklist">
+      <li><span class="box"></span><b>05-04 彩超初诊</b>：补门诊病历 + 发票</li>
+      <li><span class="box"></span><b>10-03 甲功三项</b>：补发票</li>
+      <li><span class="box"></span><b>10-07 积水潭（甲功+CT+超声）</b>：补门诊病历；核对甲功全套、超声报告是否漏取</li>
+      <li><span class="box"></span><b>10-11 积水潭超声</b>：补门诊病历 + 发票</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>🟢 已齐全（无需处理）</h3>
+    <ul class="checklist">
+      <li><span class="box"></span><b>10-15 / 10-16 / 10-17 中日友好</b>：门诊病历 + 发票 + 报告已齐全 ✅</li>
+      <li><span class="box"></span><b>10-20 / 10-21 病理报告</b>：属 10-16 就诊的结果，无需单独病历/发票</li>
+    </ul>
+  </div>
+
+  <div class="warn-box">⚠️ <b>发票副本</b>（1016 诊察费60 副本、1017 西药费220.18 副本）：报销一般要<b>原件或电子发票</b>，确认原件/电子票还在。</div>
+
+  <div class="highlight-box">
+    <h3>💡 补的优先级</h3>
+    <p>
+      先补 <b>10-07 和 10-11 积水潭</b>（离确诊最近、检查最多）；05-04、10-03 酌情。<br>
+      若走众民保「住院前后 30 天门急诊」，早期门诊多在窗口外，视报销口径决定是否补。
+    </p>
+  </div>
+
+</div>
+
 <!-- ═══════════ TAB 6: 知识科普 ═══════════ -->
 <div id="tab-knowledge" class="tab-content">
 
@@ -767,9 +803,9 @@ function switchTab(name) {
 }
 window.addEventListener('hashchange', function(){
   var h = window.location.hash.replace('#','');
-  if (['overview','doctors','questions','preop','care','reimburse','knowledge'].indexOf(h) !== -1) switchTab(h);
+  if (['overview','doctors','questions','preop','care','reimburse','materials','knowledge'].indexOf(h) !== -1) switchTab(h);
 });
-if (['overview','doctors','questions','preop','care','reimburse','knowledge'].indexOf(window.location.hash.replace('#','')) !== -1) {
+if (['overview','doctors','questions','preop','care','reimburse','materials','knowledge'].indexOf(window.location.hash.replace('#','')) !== -1) {
   switchTab(window.location.hash.replace('#',''));
 }
 </script>
